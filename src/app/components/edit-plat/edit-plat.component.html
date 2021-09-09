@@ -1,0 +1,44 @@
+<!--edit plat-->
+<section class=" section_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5">
+                <div class="section_tittle">
+
+                    <h2>Edit Plat</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="regervation_part_iner">
+                    <form class="form-contact contact_form" #platForm="ngForm" (ngSubmit)="edit()">
+                        <div class="form-row" *ngIf='plat'>
+                            <div class="form-group col-md-12">
+                                <input type="text" class="form-control" 
+                                    placeholder="name" [(ngModel)]='plat.name' [ngModelOptions]="{standalone: true}">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <input type="text" class="form-control" 
+                                    placeholder="Description"  [(ngModel)]='plat.description' [ngModelOptions]="{standalone: true}">
+                            </div>
+
+                            <div class="form-group col-md-12">
+                                <input type="text" class="form-control" 
+                                    placeholder="Price" [(ngModel)]='plat.price' [ngModelOptions]="{standalone: true}">
+                            </div>
+                            
+
+
+                        </div>
+
+
+                        <div class="regerv_btn">
+                            <button type="submit" class="btn_4" >Edit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

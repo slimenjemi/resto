@@ -1,0 +1,32 @@
+<table class="table custom-table">
+    <thead>
+      <tr>
+        <th>Index</th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Speciality</th>
+        <th>note</th>
+        <th>entry Date</th>
+        <th>Img</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let chef of chefs ; let i=index'>
+          <td>{{i}}</td>
+          <td>{{chef._id}}</td>
+          <td>{{chef.name | asterix}}</td>
+          <td>{{chef.speciality | titlecase}}</td>
+          <td  [ngStyle]="{'color':noteColor(chef.note)[0]}">{{chef.note}}: {{noteColor(chef.note)[1]}}</td>
+          <td>{{chef.entryDate | date:'dd-MM/yyyy'}}</td>
+
+
+          <td><img src="{{chef.img}}" alt="" width="100px" height="100px"></td>
+          
+          <button class="btn btn-success" (click)='goToDisplay(chef._id)'>Display</button>
+          <button class="btn btn-info"  (click)='goToEditChef(chef._id)'>Edit</button>
+          <button class="btn btn-danger"(click)='deleteChef(chef._id)'>Delete</button>
+        </tr>
+    </tbody>
+
+  </table>

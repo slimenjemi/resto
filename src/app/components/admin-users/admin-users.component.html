@@ -1,0 +1,29 @@
+<table class="table custom-table">
+    <thead>
+      <tr>
+        <th>Index</th>
+        <th>ID</th>
+        <th>firstName</th>
+        <th>lastName</th>
+        <th>Email</th>
+        <th>Tel</th>
+        <th>Image</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let user of users ; let i=index'>
+          <td>{{i}}</td>
+          <td>{{user._id}}</td>
+          <td>{{user.firstName}}</td>
+          <td>{{user.lastName}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.tel}}</td>
+          <td><img src="{{user.img}}" alt="" width="100px" height="100px"></td>
+          <button class="btn btn-success" (click)='goToDisplay(user._id)'>Display</button>
+          <button class="btn btn-info" (click)='goToEditUser(user._id)'>Edit</button>
+          <button class="btn btn-danger"(click)='deleteUser(user._id)'>Delete</button>
+        </tr>
+    </tbody>
+
+  </table>

@@ -1,0 +1,23 @@
+<table class="table custom-table" style="margin-top: 150px;">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th>Total</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let order of orders'>
+          <td>{{order._id}}</td>
+          <td>{{order.name}}</td>
+          <td>{{order.price}}</td>
+          <td>{{order.description}}</td>
+          <td>{{order.Total}}</td>
+          <button class="btn btn-danger"(click)='deleteOrder(order._id)'>Delete</button>
+        </tr>
+    </tbody>
+
+  </table>

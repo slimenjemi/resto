@@ -1,0 +1,43 @@
+<!--add-chef-->
+<section class=" section_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5">
+                <div class="section_tittle">
+
+                    <h2>{{title}} Chef</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="regervation_part_iner">
+                    <form class="form-contact contact_form" #chefForm="ngForm" (ngSubmit)="addEditChef()">
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <input type="text" class="form-control" 
+                                    placeholder="name" [(ngModel)]='chef.name' [ngModelOptions]="{standalone: true}">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <input type="text" class="form-control" placeholder="Speciality" 
+                                [(ngModel)]='chef.speciality' [ngModelOptions]="{standalone: true}">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <input type="text" class="form-control" placeholder="Note" 
+                                [(ngModel)]='chef.note' [ngModelOptions]="{standalone: true}">
+                            </div>
+                            
+
+
+                        </div>
+
+
+                        <div class="regerv_btn">
+                            <button type="submit" class="btn_4">{{title}}</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,50 @@
+<!--search-chef-->
+
+<div class="container" style="margin-top: 150px;">
+    <div class="row">
+        <div class="col-xl-5">
+            <div class="section_tittle">
+
+                <h2>Search Chef</h2>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="regervation_part_iner">
+                <form class="form-contact contact_form" #searchForm="ngForm" (ngSubmit)="searchChef()">
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <input type="text" class="form-control" placeholder="Speciality"
+                                [(ngModel)]='chef.speciality' [ngModelOptions]="{standalone: true}">
+                        </div>
+                    </div>
+
+
+                    <div class="regerv_btn">
+                        <button type="submit" class="btn_4">Search</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 30px;">
+        <div class="col-sm-6 col-lg-4" *ngFor='let chef of findedChefs'>
+            <div class="single_blog_item">
+                <div class="single_blog_img">
+                    <img src="assets/img/team/chefs_1.png" alt="">
+                </div>
+                <div class="single_blog_text text-center">
+                    <h3>{{chef.name}}</h3>
+                    <p>{{chef.note}}</p>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+</div>

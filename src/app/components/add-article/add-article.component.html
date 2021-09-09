@@ -1,0 +1,45 @@
+<!--add Article-->
+<section class=" section_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5">
+                <div class="section_tittle">
+
+                    <h2>Add Article</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="regervation_part_iner">
+                    <form class="form-contact contact_form" [formGroup]='addArticleForm'>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <input type="text" class="form-control" formControlName="title"
+                                    placeholder="enter your title">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <input type="text" class="form-control" formControlName="content"
+                                    placeholder="enter your content">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <input type="date" class="form-control"  formControlName="date" id="inputEmail" placeholder=" enter your date">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <input type="text" class="form-control"  formControlName="category" id="inputTel" placeholder=" enter your category">
+                            </div>
+                            
+
+
+                        </div>
+
+
+                        <div class="regerv_btn">
+                            <button type="submit" class="btn_4" (click)='addArticle()'>Add Article</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

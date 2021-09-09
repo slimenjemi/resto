@@ -1,0 +1,46 @@
+<!--::exclusive_item_part start::-->
+<section class="exclusive_item_part blog_item_section">
+    <div class="container" style="margin-top: 150px;">
+        <div class="row">
+            <div class="col-xl-5">
+                <div class="section_tittle">
+                    
+                    <h2>Menus-Orders</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!--*ngfor: directive structurelle qui fait le lop graphiquement -->
+            <div class="col-sm-6 col-lg-4" *ngFor='let m of menus'>
+                <div class="single_blog_item">
+                    <div class="single_blog_img">
+                        <img src="assets/img/food_item/food_item_1.png" alt="">
+                    </div>
+                    <div class="single_blog_text">
+                        <h3>{{m.name}}</h3>
+                        <p [ngClass]="{
+                            redClass:priceColor(m.price)=='red',
+                            orangeClass:priceColor(m.price)=='orange',
+                            greenClass:priceColor(m.price)=='green' }" >{{m.description}} </p>
+                        <p [ngStyle]="{'color':priceColor(m.price)}">{{m.price}} DT </p>
+                        <a  type="submit" (click)="Reserve(m._id)" class="btn_3">Reserve <img src="assets/img/icon/left_2.svg" alt=""></a>                    </div>
+                </div>
+            </div>
+            
+        
+            
+                <!-- <div class="single_blog_item">
+                    <div class="single_blog_img">
+                        <img src="assets/img/food_item/food_item_1.png" alt="">
+                    </div>
+                    <div class="single_blog_text">
+                        <h3>Cremy Noodles</h3>
+                        <p>Was brean shed moveth day yielding tree yielding day were female and </p>
+                        <a href="#" class="btn_3">Read More <img src="assets/img/icon/left_2.svg" alt=""></a>
+                    </div>
+                </div> -->
+            <!-- </div>  -->
+        </div>
+    </div>
+</section>
+<!--::exclusive_item_part end::-->
